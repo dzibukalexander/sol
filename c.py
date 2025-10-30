@@ -28,13 +28,8 @@ def max_income(n, y, prices):
     return max_profit
 
 def main():
-    import sys
-    input = sys.stdin.read
-    data = input().split()
-    
-    n = int(data[0])
-    y = int(data[1])
-    prices = list(map(int, data[2:2+n]))
+    n, y = map(int, input().split())
+    prices = list(map(int, input().split()))
     
     result = max_income(n, y, prices)
     print(result)
